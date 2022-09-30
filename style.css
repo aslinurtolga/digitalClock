@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    
 }
 
 body{
@@ -12,7 +13,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #222831;
+    background: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
 
 #time{
@@ -22,7 +25,7 @@ body{
     font-weight: 700;
 }
 
-#time .circ {
+#time .circle {
     position: relative;
     width: 150px;
     height: 150px;
@@ -31,16 +34,16 @@ body{
     align-items: center;
 }
 
-#time .circ svg{
+#time .circle svg{
     position: relative;
     width: 150px;
     height: 150px;
-    transform: rotate(250deg);
+    transform: rotate(270deg);
 }
 
-#time .circ svg circle{
-    width: 100px;
-    height: 100px;
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
     fill: transparent;
     stroke: #191919;
     stroke-width: 4;
@@ -48,9 +51,9 @@ body{
 
 }
 
-#time .circ svg circle:nth-child(2){
+#time .circle svg circle:nth-child(2){
     stroke: var(--clr);
-    stroke-dasharray: 450;
+    stroke-dasharray: 440;
 
 }
 #time div {
@@ -70,7 +73,7 @@ text-transform: uppercase;
 }
 
 
-#time .clockFormat{
+#time .ap{
     position: relative;
     font-size: 1em;
     transform: translateX(-20px) ;
@@ -82,7 +85,7 @@ text-transform: uppercase;
     justify-content: center;
     width: 100%;
     height: 100%;
-    z-index: 20;
+    z-index: 10;
 }
 
 .dots::before {

@@ -1,12 +1,12 @@
 setInterval(() => {
-  let hour = document.getElementById("hour");
-  let minutes = document.getElementById("min");
-  let seconds = document.getElementById("sec");
-  let clockFormat = document.getElementById("ampm");
+  let hours = document.getElementById("hours");
+  let minutes = document.getElementById("minutes");
+  let seconds = document.getElementById("seconds");
+  let ampm = document.getElementById("ampm");
 
-  let hh =  document.getElementById("hrs");
-  let mnt =  document.getElementById("mnt");
-  let scn =  document.getElementById("scn");
+  let hh =  document.getElementById("hh");
+  let mm =  document.getElementById("mm");
+  let ss =  document.getElementById("ss");
 
   let hourDot = document.querySelector(".hourDot");
   let minDot = document.querySelector(".minDot");
@@ -18,27 +18,27 @@ setInterval(() => {
   let am = h >= 12 ? "PM" : "AM";
 
 
-  //24 saati 12 saate çevirmek için
-  if (h > 12) {
-    h = h - 12;
-  }
+  //24 saati 12 saate çevirmek istersek
+  // if (h > 12) {
+  //   h = h - 12;
+  // }
   //tek basamaklı sayıdan önce sıfır ekleyelim
-  h = h < 10 ? "0" + h : h;
-  m = m < 10 ? "0" + m : m;
-  s = s < 10 ? "0" + s : s;
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
 
-  hour.innerHTML = h + "<br><span>Hours</span>";
+  hours.innerHTML = h + "<br><span>Hours</span>";
   minutes.innerHTML = m + "<br><span>Minutes</span>";
   seconds.innerHTML = s + "<br><span>Seconds</span>";
   ampm.innerHTML = am;
 
 
 
-  hrs.style.strokeDashoffset = 450 - (450 * h) / 12;
-  //12 saatlik saat
-  mnt.style.strokeDashoffset = 450 - (450 * m) / 60;
+  hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+  //24 saatlik saat
+  mm.style.strokeDashoffset = 440 - (440 * m) / 60;
   // 60 dakika
-  scn.style.strokeDashoffset = 450 - (450 * s) / 60;
+  ss.style.strokeDashoffset = 450 - (440 * s) / 60;
   //60 saniye
 
 
