@@ -18,10 +18,50 @@ body{
 #time{
     display: flex;
     gap: 50px;
-    color: #413F42;
+    color: #fff;
     font-weight: 700;
 }
 
-#time .circle {
+#time .circ {
     position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time .circ svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(250deg);
+}
+
+#time .circ svg circle{
+    width: 100px;
+    height: 100px;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px, 5px);
+
+}
+
+#time .circ svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 450;
+
+}
+#time div {
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#time .clockFormat{
+    position: relative;
+    font-size: 1em;
+    transform: translateX(-20px) ;
+
 }

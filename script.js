@@ -20,6 +20,19 @@ setInterval(() => {
 
   hour.innerHTML = h;
   minutes.innerHTML = m;
-  seconds.innerHTML = m;
+  seconds.innerHTML = s;
   ampm.innerHTML = am;
+
+
+
+  hrs.style.strokeDashoffset = 450 - (450 * h) / 12;
+  //12 saatlik saat
+  mnt.style.strokeDashoffset = 450 - (450 * m) / 60;
+  // 60 dakika
+  scn.style.strokeDashoffset = 450 - (450 * s) / 60;
+  //60 saniye
+
+
+
+
 });
