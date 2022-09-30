@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #DFD3C3;
+}
+
+#time{
+    display: flex;
+    gap: 50px;
+    color: #413F42;
+    font-weight: 700;
+}
+
+#time .circle {
+    position: relative;
+}
